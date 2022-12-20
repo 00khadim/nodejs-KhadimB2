@@ -23,3 +23,21 @@ fs.writeFile('text.txt', newData, function (erreur) {
     console.log('Fichier mis à jour !');
     console.log('Voici le nouveau text:',newData);
 });
+
+
+
+// 4 - Écrivez un programme Node.js qui utilise le module fs pour lister les fichiers d'un répertoire.
+
+
+
+const fs = require('fs');             // fonction
+
+fs.readdir('.', (erreur, files) => {   // Appelle la fonction readdir passe en parametre erreur et la liste des ficher
+    if(erreur){                        //Message d'erreur
+        console.log(erreur);
+    }
+  console.log(files);                 // Le ficher dans le repertoire courant
+});
+
+// 5 - Écrivez un programme Node.js qui utilise le module fs pour créer un nouveau fichier et y écrire des données.
+

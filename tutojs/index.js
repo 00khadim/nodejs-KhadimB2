@@ -1,22 +1,8 @@
-const fs = require("fs")
+const fs = require('fs');             // fonction
 
-fs.readFile('text.txt', 'utf-8',(erreur, data) =>{
-    if(erreur){
-        console.log(erreur)
-        return
+fs.readdir('.', (erreur, files) => {   // Appelle la fonction readdir passe en parametre erreur et la liste des ficher
+    if(erreur){                        //Message d'erreur
+        console.log(erreur);
     }
-    else {
-        console.log(data);
-    }
-}
-   
-)
-
-let newData ="21"
-fs.writeFile('text.txt', newData, function (erreur) {
-    if (erreur){
-        console.log('je rentre dans l\'erreur ', erreur);
-    }
-    console.log('Fichier mis à jour !');
-    console.log('Voici le nouveau text:',newData);
+  console.log(files);                 // Le ficher dans le repertoire courant
 });
