@@ -1,9 +1,5 @@
+const os = require('os');
 
-const fs = require('fs');                               
+const repertoire = os.homedir();           //repertoire personelle de l'user
 
-let name_File = "myFile.txt"                                //  Nom du ficher 
-let contenu = "Mon contenue est bien present!"              //  Contenu du ficher
-fs.appendFile(name_File, contenu, function (err) {          // Fonction pour ajouter un ficher dans le repertoire dans la quelle on se trouve
-    if (err) throw err;
-    console.log("Fichier créé et il s'appelle", name_File); //Afficher le nom du ficher
-}); 
+console.log("Le répertoire personnel de l'utilisateur est :", repertoire);

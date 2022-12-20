@@ -1,4 +1,4 @@
-//Écrivez un programme Node.js qui lit un fichier et imprime son contenu dans la console.
+// 1 - Écrivez un programme Node.js qui lit un fichier et imprime son contenu dans la console.
 
 const fs = require("fs")                //Function
 
@@ -13,7 +13,7 @@ fs.readFile('text.txt', 'utf-8', (erreur, data) => {          //  Readfile est u
 }
 )
 
-//Écrivez un programme Node.js qui lit un fichier, modifie son contenu et réécrit le contenu modifié dans le fichier.
+// 2 - Écrivez un programme Node.js qui lit un fichier, modifie son contenu et réécrit le contenu modifié dans le fichier.
 
 let newData = "21"                                           //Variable qui sera le nouveau text dans le ficher en question
 
@@ -25,6 +25,10 @@ fs.writeFile('text.txt', newData, function (erreur) {       //  Fonction qui per
     console.log('Voici le nouveau text:', newData);          //Afficber le nouveau text
 });
 
+
+// 3 - Écrivez un programme Node.js qui utilise le module http pour créer un serveur simple qui sert un fichier statique.
+
+//A faire!!
 
 
 // 4 - Écrivez un programme Node.js qui utilise le module fs pour lister les fichiers d'un répertoire.
@@ -50,3 +54,13 @@ fs.appendFile(name_File, contenu, function (err) {          // Fonction pour ajo
     if (err) throw err;
     console.log("Fichier créé et il s'appelle", name_File); //Afficher le nom du ficher
 }); 
+
+
+// 6 -Écrivez un programme Node.js qui utilise le module os pour obtenir le répertoire personnel de l'utilisateur actuel.
+
+// Marche pas encore
+const os = require('os');
+
+const repertoire = os.homedir();           //repertoire personelle de l'user
+
+console.log("Le répertoire personnel de l'utilisateur est :", repertoire);
