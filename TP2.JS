@@ -23,11 +23,15 @@ fs.readFile('text.txt', 'utf-8', (erreur, data) => {          //  Readfile est u
 
 // 2 - Écrivez un programme Node.js qui lit un fichier, modifie son contenu et réécrit le contenu modifié dans le fichier.
 
+
+const fs = require("fs")                                     //Function
+
 let newData = "21"                                           //Variable qui sera le nouveau text dans le ficher en question
 
 fs.writeFile('text.txt', newData, function (erreur) {       //  Fonction qui permet de modifie le contenue d'un ficher (regarde doc),
     if (erreur) {
         console.log('je rentre dans l\'erreur ', erreur);
+        return;
     }
     console.log('Fichier mis à jour !');                    //  Afficher 
     console.log('Voici le nouveau text:', newData);          //Afficber le nouveau text
@@ -141,6 +145,8 @@ console.log("Le repertoire courant est : ", repertoire);
 
 
 // 8 - Écrivez un programme Node.js qui utilise le module path pour manipuler les chemins de fichiers.
+
+
 // 9 Écrivez un programme Node.js qui utilise le module querystring pour analyser une chaîne de requête URL.
 // 10 - Écrivez un programme Node.js qui utilise le module events pour créer un émetteur d'événements personnalisé.
 
