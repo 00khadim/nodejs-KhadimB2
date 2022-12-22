@@ -1,34 +1,19 @@
-const array = [
+const readline = require('readline');
 
-    {
-        name: 'Khadim',
-        LastName: "Cisse",
-        age: 22
-    },
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-    {
-        name: 'Kadem',
-        LastName: "Garnier",
-        age: 23
-    }
-];
+const r2 = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-
-function moi(objects, propertyName) {
-    
-    return objects.map(function (object) {
-
-        return object[propertyName];
-
+rl.question('Please enter the first number', (answer1) => {
+    r2.question('Please enter the second number', (answer2) => {
+        var result = (+answer1) + (+answer2);
+        console.log(`The sum of above two numbers is ${result}`);
     });
-
-}
-
-
-
-
-
-
-
-console.log(moi(array, 'name')); 
-console.log(moi(array, 'age'));
+    rl.close();
+});
